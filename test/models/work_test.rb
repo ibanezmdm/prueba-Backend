@@ -14,4 +14,9 @@ class WorkTest < ActiveSupport::TestCase
     assert_instance_of User, u
   end
 
+  test "Scope no_item select only Works without item" do
+    values = Work.no_item.collect(&:item).count(nil)
+    assert_equal values, Work.no_item.collect(&:item).count
+  end
+
 end
