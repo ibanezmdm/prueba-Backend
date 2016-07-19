@@ -1,11 +1,16 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  user_id: 
-  item_id: 
-  description: MyString
+work_1:
+  user: user_1
+  item: item_1
+  description: Work 1
 
-two:
-  user_id: 
-  item_id: 
-  description: MyString
+work_2:
+  user: user_2
+  item: item_2
+  description: work 2
+
+work_3:
+  user: user_1
+  item: item_2
+  description: work 3

@@ -5,3 +5,17 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Work.delete_all
+User.delete_all
+Item.delete_all
+Category.delete_all
+
+c = Category.create(name: "Category")
+3.times do |j|
+	i = c.items.build(item_size: (j*2)+1, description: "item #{j}",serial_number: j)
+	u = User.new(name: "User #{j}")
+	u.works.build(item: i, description: "Work #{i}")
+	i.save
+	u.save
+end
