@@ -1,0 +1,9 @@
+<% @works.each do |w| %>
+	<div class="col-md-3">
+		<div class="thumbnail">
+			<h4>Work Name: <%= w.description %></h4>
+			<h5>User: <%= w.user.name %></h5>
+			<p>Item: <%= w.try(:item) || "No Item" %></p>
+		</div>
+	</div>
+<% end %>

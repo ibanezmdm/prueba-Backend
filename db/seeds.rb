@@ -15,8 +15,8 @@ c = Category.create(name: "Category")
 3.times do |j|
 	i = c.items.build(item_size: (j*2)+1, description: "item #{j}",serial_number: j)
 	u = User.new(name: "User #{j}")
-	u.works.build(item: i, description: "Work #{i}")
-	u.works.build(description: "Work without itam #{i}")
+	u.works.build(item: i, description: "Work #{j}")
+	u.works.build(description: "Work without itam #{j}")
 	i.save
 	u.save
 end
