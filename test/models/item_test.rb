@@ -20,4 +20,11 @@ class ItemTest < ActiveSupport::TestCase
 		assert_not @item1.valid?
 	end
 
+	test "every item deleted keep into record table" do
+		sn = @item1.serial_number
+		@item1.destroy
+		record = Record.where("description like ?", "%#{sn}%")
+		assert_match "La pieza con serial #{sn} ha sido borrada", record.first.description
+	end
+
 end
