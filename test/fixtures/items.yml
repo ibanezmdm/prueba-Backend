@@ -1,13 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-item_one:
+item_1:
   item_size: 1
   description: item 1
   serial_number: 1
-  category_id: 
+  category: cat_1 
 
-item_two:
+item_2:
   item_size: 1
   description: item 2
   serial_number: 2
-  category_id: 
+  category: cat_2

@@ -6,7 +6,7 @@ class ItemTest < ActiveSupport::TestCase
 	# end
 
 	setup do
-		@item1 = items(:item_one)
+		@item1 = items(:item_1)
 	end
 
 	# test "item serial number must be unique" do
@@ -14,5 +14,10 @@ class ItemTest < ActiveSupport::TestCase
 	# 	i.valid?
 	# 	assert_not_nil i.errors(:serial_number)
 	# end
+
+	test "item size must be greater than zero" do
+		@item1.item_size = 0
+		assert_not @item1.valid?
+	end
 
 end
